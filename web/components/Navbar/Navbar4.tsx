@@ -11,6 +11,7 @@ const data = {
     { name: 'Food Trucks', href: '/food-trucks' },
     { name: 'About', href: '/about' },
     { name: 'Blog', href: '/blog' },
+    { name: 'Blog', href: '/blog' },
     { name: 'Vendor sign up', href: '/vendor-sign-up' },
   ],
 }
@@ -28,15 +29,18 @@ export default function Navbar4() {
           <Link href="/">
             <a
               href=""
-              className="relative h-20 w-44 drop-shadow-2xl md:flex md:justify-start"
+              // Logo scaling md:h-full md:w-full
+              className=" relative h-20 w-44 md:h-full md:w-full"
+              //   className="relative h-20 w-44 drop-shadow-2xl md:flex md:justify-start"
+              //   style={{ width: '100%', height: '100%', position: 'relative' }}
             >
               {/* DO NOT FORGET TO MAKE A PARENT DIV RELATIVE  */}
               <Image
                 src="/lighthouse-logo.png"
-                alt="Picture of the author"
+                alt="logo"
                 layout="fill" // required
                 objectFit="contain" // change to suit your needs
-                className="object-contain object-center " // just an example
+                className="object-contain object-center" // just an example
               />
               {/* ^^^DO NOT FORGET TO MAKE A PARENT DIV RELATIVE  */}
             </a>
@@ -83,17 +87,19 @@ export default function Navbar4() {
         {/* Navbar */}
         <nav
           className={
-            'flex flex-col md:block md:flex-row md:space-x-4' +
+            // ' flex-col md:block md:flex-row md:space-x-4 w-full md:flex-nowrap ' +
+            ' flex flex-col items-center justify-center text-center md:block md:flex-row md:space-x-6' +
             ' ' +
             (show ? 'block' : 'hidden')
           }
         >
-          <a href="" className="">
-            Home
-          </a>
-          <a href="" className="">
-            Schedule
-          </a>
+          {sitemap.map((link, index, sitemap) => {
+            return (
+              <Link href={link.href} key={index}>
+                <a className="whitespace-nowrap">{link.name}</a>
+              </Link>
+            )
+          })}
         </nav>
         {/* END navbar  */}
       </div>
