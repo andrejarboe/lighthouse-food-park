@@ -40,7 +40,10 @@ export default function Navbar1() {
               </div>
             </Link>
             {/* nav right */}
-            <button className="focus:shadow-outline rounded-lg focus:outline-none lg:hidden">
+            <button
+              onClick={() => setShow(!show)}
+              className="focus:shadow-outline rounded-lg focus:outline-none lg:hidden"
+            >
               <svg
                 width={25}
                 height={18}
@@ -73,7 +76,13 @@ export default function Navbar1() {
             </button>
           </div>
           {/* end mobile nav closed */}
-          <nav className="hidden flex-grow flex-col pb-4 lg:flex lg:flex-row lg:justify-end lg:pb-0">
+          <nav
+            className={
+              ' flex-grow flex-col pb-4 lg:flex lg:flex-row lg:justify-end lg:pb-0' +
+              ' ' +
+              (show ? 'block' : 'hidden')
+            }
+          >
             <div className="flex flex-col lg:flex-row">
               {data.siteMap.map((item, index) => {
                 if (index === data.siteMap.length - 1) {
@@ -87,7 +96,7 @@ export default function Navbar1() {
                 } else {
                   return (
                     <Link key={index} href={item.href}>
-                      <a className="font-poppins hover:text-primary px-8 py-5 text-sm font-semibold text-primary-100 text-black transition-all delay-150 ease-in-out lg:px-5 2xl:px-8">
+                      <a className="font-poppins px-8 py-5 text-sm font-semibold text-primary-100 text-black transition-all delay-150 ease-in-out hover:text-primary lg:px-5 2xl:px-8">
                         {item.name}
                       </a>
                     </Link>
