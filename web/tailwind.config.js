@@ -19,6 +19,10 @@ module.exports = {
           800: '#001725',
           900: '#000A10',
         },
+        secondary: {
+          DEFAULT: '#35B8BE',
+          500: '#35B8BE',
+        },
       },
     },
   },

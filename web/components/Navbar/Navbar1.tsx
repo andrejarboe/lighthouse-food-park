@@ -9,104 +9,125 @@ const data = {
     { name: 'Home', href: '/' },
     { name: 'Schedule', href: '/schedule' },
     { name: 'Food Trucks', href: '/food-trucks' },
-    { name: 'About', href: '/About' },
+    { name: 'About', href: '/about' },
     { name: 'Blog', href: '/blog' },
-    { name: 'Contact', href: '/contact' },
+    { name: 'Vendor sign up', href: '/vendor-sign-up' },
   ],
 }
 
 export default function Navbar1() {
   const [show, setShow] = useState(false)
 
+  const { transparent, siteMap, logo, company } = data
+
   return (
     <header>
-      <div className="border-brand-black w-full border-b bg-white">
-        <div className="mx-auto flex flex-col px-4 md:px-10 lg:flex-row lg:items-center lg:justify-between lg:px-20 2xl:px-40">
-          <div className="flex flex-row items-center justify-between py-4">
-            {/* nav left  */}
-            <Link href="/">
-              <div className="relative h-12 w-44">
-                <a href="">
-                  {/* DO NOT FORGET TO MAKE A PARENT DIV RELATIVE  */}
-                  <Image
-                    src="/lighthouse-logo.png"
-                    alt="Picture of the author"
-                    layout="fill" // required
-                    objectFit="contain" // change to suit your needs
-                    className="object-contain object-top" // just an example
-                  />
-                  {/* ^^^DO NOT FORGET TO MAKE A PARENT DIV RELATIVE  */}
-                </a>
-              </div>
-            </Link>
-            {/* nav right */}
-            <button
-              onClick={() => setShow(!show)}
-              className="focus:shadow-outline rounded-lg focus:outline-none lg:hidden"
-            >
-              <svg
-                width={25}
-                height={18}
-                viewBox="0 0 25 18"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M1 1H19"
-                  stroke="#000"
-                  strokeWidth={2}
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-                <path
-                  d="M6 9H24"
-                  stroke="#000"
-                  strokeWidth={2}
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-                <path
-                  d="M1 17H19"
-                  stroke="#000"
-                  strokeWidth={2}
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </button>
-          </div>
-          {/* end mobile nav closed */}
-          <nav
-            className={
-              ' flex-grow flex-col pb-4 lg:flex lg:flex-row lg:justify-end lg:pb-0' +
-              ' ' +
-              (show ? 'block' : 'hidden')
-            }
+      <div className="mx-auto flex max-w-6xl flex-col justify-between px-4 py-4 md:flex-row md:py-6">
+        {/* left header  */}
+        <div
+          className={
+            'flex items-center justify-between pb-4 md:pb-0' +
+            ' ' +
+            (show ? 'pb-4' : 'pb-0')
+          }
+        >
+          <Link href="/">
+            <a className="relative h-20 w-44  text-2xl font-bold text-primary drop-shadow-2xl">
+              {/* DO NOT FORGET TO MAKE A PARENT DIV RELATIVE  */}
+              <Image
+                src="/lighthouse-logo.png"
+                alt="Picture of the author"
+                layout="fill" // required
+                objectFit="contain" // change to suit your needs
+                className="object-contain object-center" // just an example
+              />
+              {/* ^^^DO NOT FORGET TO MAKE A PARENT DIV RELATIVE  */}
+            </a>
+          </Link>
+          {/* <div className="flex-1 w-64"></div> */}
+          <button
+            onClick={() => setShow(!show)}
+            className="flex items-center justify-center text-primary md:hidden"
           >
-            <div className="flex flex-col lg:flex-row">
-              {data.siteMap.map((item, index) => {
-                if (index === data.siteMap.length - 1) {
-                  return (
-                    <Link key={index} href={item.href}>
-                      <a className="font-poppins border-brand-blue font-regular my-1 ml-8 block h-12 w-48 rounded-full border-2 bg-primary py-2.5 text-center text-sm text-white transition-all ease-in-out hover:bg-white hover:text-primary">
-                        Vendor sign up
-                      </a>
-                    </Link>
-                  )
-                } else {
-                  return (
-                    <Link key={index} href={item.href}>
-                      <a className="font-poppins px-8 py-5 text-sm font-semibold text-primary-100 text-black transition-all delay-150 ease-in-out hover:text-primary lg:px-5 2xl:px-8">
-                        {item.name}
-                      </a>
-                    </Link>
-                  )
-                }
-              })}
-            </div>
-          </nav>
+            <svg
+              className="stroke-primary hover:stroke-primary-300"
+              width="25"
+              height="18"
+              viewBox="0 0 25 18"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M1 1H19"
+                stroke=""
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M6 9H24"
+                stroke=""
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M1 17H19"
+                stroke=""
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
         </div>
+        {/* END left header */}
+        {/* right header */}
+        <div
+          className={
+            'md:max-w-40 flex w-full flex-grow flex-col items-center justify-end space-y-4 text-center  capitalize md:flex md:flex-row md:space-x-4 md:space-y-0' +
+            ' ' +
+            (show ? 'block' : 'hidden')
+          }
+        >
+          {siteMap.map((link, index, siteMap) => {
+            if (index === siteMap.length - 1) {
+              return (
+                <div className="w-full border-t pt-6 pb-4 md:border-t-0 md:p-0">
+                  <Link key={index} href={link.href}>
+                    <a
+                      className={
+                        // 'w-full whitespace-nowrap rounded bg-red-300 p-3 text-red-700 shadow transition duration-500 hover:bg-red-200 hover:text-red-600 hover:shadow-xl ' +
+                        ' ' +
+                        'font-poppins font-regular text-md h-12 w-48 whitespace-nowrap rounded-full border-2 border-primary bg-primary py-2 px-4 text-white transition duration-200 ease-in-out hover:bg-white hover:text-primary'
+                      }
+                    >
+                      {link.name}
+                    </a>
+                  </Link>
+                </div>
+              )
+            } else {
+              return (
+                <Link key={index} href={link.href}>
+                  <a className="text-md hover:underline-primary w-full whitespace-nowrap border-t pt-4 font-normal transition duration-200 ease-in-out hover:text-primary-600 md:border-t-0 md:pt-0">
+                    {link.name}
+                  </a>
+                </Link>
+              )
+            }
+          })}
+        </div>
+        {/* END right header */}
       </div>
     </header>
   )
+}
+
+{
+  /* 
+
+
+
+*/
 }
