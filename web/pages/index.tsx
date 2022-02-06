@@ -12,6 +12,63 @@ export default function Home() {
 
       <Navbar4 />
 
+      {/* Section 1 */}
+      <section className="bg-white px-2 py-10 md:px-0">
+        <div className="container mx-auto max-w-7xl items-center px-8 xl:px-5">
+          <div className="flex flex-wrap items-center sm:-mx-3">
+            <div className="w-full md:w-1/2 md:px-3">
+              <div className="w-full space-y-6 pb-6 sm:max-w-md sm:pr-5 md:space-y-4 md:pb-0 lg:max-w-lg lg:space-y-8 lg:pr-0 xl:space-y-9">
+                <h1 className="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl md:text-4xl lg:text-5xl xl:text-6xl">
+                  <span className="block xl:inline text-primary">The Lighthouse</span>
+                  <br />
+                  <span className="block text-primary xl:inline">
+                    Food Park
+                  </span>
+                </h1>
+                <p className="mx-auto text-base text-gray-500 sm:max-w-md md:max-w-3xl lg:text-xl">
+                  It's never been a better time to eat.
+                </p>
+                <div className="relative flex flex-col sm:flex-row sm:space-x-4">
+                  <a
+                    href="#_"
+                    className="mb-3 flex w-full items-center rounded-full bg-primary border-2 border-primary  px-6 py-3 text-lg text-white hover:bg-white hover:text-primary sm:mb-0 sm:w-auto"
+                  >
+                    Vendor Sign Up
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="ml-1 h-5 w-5"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth={2}
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <line x1={5} y1={12} x2={19} y2={12} className="" />
+                      <polyline points="12 5 19 12 12 19" className="" />
+                    </svg>
+                  </a>
+                  <a
+                    href="#_"
+                    className="flex items-center rounded-full bg-gray-100 px-6 py-3 text-gray-500 hover:bg-gray-200 hover:text-gray-600"
+                  >
+                    Events
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div className="w-full md:w-1/2">
+              <div className="h-auto w-full overflow-hidden rounded-md shadow-xl sm:rounded-xl">
+                <img
+                  src="https://images.pexels.com/photos/5779655/pexels-photo-5779655.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                  className=""
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section>
         <div className="w-full px-4 md:px-10 lg:px-20 2xl:px-40">
           <div className="grid grid-cols-1 gap-10 py-20 lg:grid-cols-2">
