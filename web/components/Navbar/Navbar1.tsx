@@ -18,7 +18,7 @@ const data = {
 export default function Navbar1() {
   const [show, setShow] = useState(false)
 
-  const { transparent, siteMap, logo, company } = data
+  const { transparent, siteMap, company } = data
 
   return (
     <header>
