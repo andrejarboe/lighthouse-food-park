@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @font-face {
+            font-family: Casual;
+            src: url('./assets/fonts/Casual-Regular.ttf');
+        }
+        .font-poppins{
+            font-family: 'Poppins', sans-serif;
+        }
+        .font-casual{
+            font-family: Casual;
+        }
+    </style>
+</head>
+<body>
+    <!-- navbar -->
+    <section>
+        <div class="bg-white w-full border-b border-brand-black">
+            <div class="flex flex-col px-4 md:px-10 lg:px-20 2xl:px-40 mx-auto lg:items-center lg:justify-between lg:flex-row">
+                <div class="py-4 flex flex-row items-center justify-between">
+                    <a href="#" class="flex md:py-1">
+                        <img src="./assets/img/logo.png" alt="">                    
+                    </a>
+                    <button class="lg:hidden rounded-lg focus:outline-none focus:shadow-outline" @click="open = !open">
+                        <svg width="25" height="18" viewBox="0 0 25 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 1H19" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M6 9H24" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M1 17H19" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>                           
+                    </button>
+                </div>
+                <nav class="flex-col flex-grow pb-4 lg:pb-0 hidden lg:flex lg:justify-end lg:flex-row">
+                    <div class="flex flex-col lg:flex-row">
+                        <a class="px-8 lg:px-5 2xl:px-8 py-5 text-primary-100 font-poppins font-normal text-sm text-black hover:text-brand-blue transition-all delay-150 ease-in-out" href="#">Home</a>
+                        <a class="px-8 lg:px-5 2xl:px-8 py-5 text-primary-100 font-poppins font-normal text-sm text-black hover:text-brand-blue transition-all delay-150 ease-in-out" href="#">Schedule</a>
+                        <a class="px-8 lg:px-5 2xl:px-8 py-5 text-primary-100 font-poppins font-normal text-sm text-brand-blue hover:text-brand-blue transition-all delay-150 ease-in-out" href="#">Food trucks</a>
+                        <a class="px-8 lg:px-5 2xl:px-8 py-5 text-primary-100 font-poppins font-normal text-sm text-black hover:text-brand-blue transition-all delay-150 ease-in-out" href="#">About</a>
+                        <a class="px-8 lg:px-5 2xl:px-8 py-5 text-primary-100 font-poppins font-normal text-sm text-black hover:text-brand-blue transition-all delay-150 ease-in-out" href="#">Contact</a>
+                        <button class="ml-8 my-1 py-2.5 block font-poppins text-white bg-brand-blue border-2 border-brand-blue font-regular text-sm rounded-full h-12 w-48 text-center hover:text-brand-blue hover:bg-white transition-all delay-150 ease-in-out">Vendor sign up</button>
+                    </div>
+                </nav>
+            </div>
+        </div>  
+    </section>
+
+    <!-- about us -->
+    <section>
+        <div class="w-full px-4 md:px-10 lg:px-20 2xl:px-40">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 py-20">
+                <div class="text-center lg:text-left">
+                    <p class="font-casual text-4xl lg:text-6xl text-black pt-10">About</p>
+                    <p class="font-poppins text-sm lg:text-base text-brand-gray py-7">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                        <br><br>
+                        It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passage.</p>
+                    <button class="mx-auto lg:ml-0 my-4 lg:my-8 py-2.5 block font-poppins text-white bg-brand-blue border-2 border-brand-blue font-regular text-sm rounded-full h-14 w-48 text-center hover:text-brand-blue hover:bg-white transition-all delay-150 ease-in-out">Vendor sign up</button>
+                </div>
+                <div class="">
+                    <div class="relative">
+                        <img src="./assets/img/about-img.png" class="mx-auto lg:mr-0" alt="">
+                        <div class="h-52 w-52 rounded-[63px] bg-brand-blue opacity-10 absolute -left-5 sm:left-0 md:left-[13%] lg:left-0 2xl:left-[20%] ml-3 -mt-44"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- map -->
+    <section>
+        <div class="w-full px-4 md:px-10 lg:px-20 2xl:px-40 py-5 lg:py-20">
+            <p class="font-casual text-4xl lg:text-6xl text-black py-5 lg:py-10 text-center">Park map</p>
+            <div>
+                <img src="./assets/img/map.png" class="mx-auto w-full my-3 lg:my-10" alt="">
+            </div>
+            <button class="mx-auto my-4 lg:my-8 py-2.5 block font-poppins text-white bg-brand-blue border-2 border-brand-blue font-regular text-sm rounded-full h-14 w-48 text-center hover:text-brand-blue hover:bg-white transition-all delay-150 ease-in-out">Get directions</button>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <section>
+        <div class="w-full bg-brand-lightblue">
+            <div class="p-8">
+                <img src="./assets/img/footer logo.png" class="mx-auto" alt="">
+                <p class="pt-8 text-center font-poppins text-black text-base text-brand-gray">Lorem Ipsum is simply dummy text of the printing and <br class="hidden md:block">
+                    typesetting industry. </p>
+                <p class="py-7 text-center font-poppins text-black text-base">
+                    Address goes here <br>
+                    contact@yourcompany.com <br>
+                    +00 123 456 789
+                </p>
+                <div class="flex justify-center pt-7">
+                    <!-- insta -->
+                    <a href="" class="mx-2">
+                        <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M8.08708 1.15475C9.35783 1.09625 9.76299 1.08325 13 1.08325C16.237 1.08325 16.6422 1.09734 17.9118 1.15475C19.1815 1.21217 20.0482 1.41475 20.8065 1.70834C21.6006 2.00842 22.321 2.4775 22.9168 3.08417C23.5235 3.67892 23.9915 4.39825 24.2905 5.19342C24.5852 5.95175 24.7867 6.81842 24.8452 8.08592C24.9037 9.35883 24.9167 9.764 24.9167 12.9999C24.9167 16.2369 24.9026 16.6421 24.8452 17.9128C24.7877 19.1803 24.5852 20.047 24.2905 20.8053C23.9915 21.6006 23.5227 22.3211 22.9168 22.9167C22.321 23.5234 21.6006 23.9914 20.8065 24.2904C20.0482 24.5851 19.1815 24.7866 17.914 24.8451C16.6422 24.9036 16.237 24.9166 13 24.9166C9.76299 24.9166 9.35783 24.9025 8.08708 24.8451C6.81958 24.7877 5.95291 24.5851 5.19458 24.2904C4.39933 23.9914 3.6788 23.5226 3.08316 22.9167C2.47691 22.3216 2.00775 21.6015 1.70841 20.8064C1.41483 20.0481 1.21333 19.1814 1.15483 17.9139C1.09633 16.641 1.08333 16.2358 1.08333 12.9999C1.08333 9.76292 1.09741 9.35775 1.15483 8.08808C1.21224 6.81842 1.41483 5.95175 1.70841 5.19342C2.00819 4.39834 2.47771 3.67817 3.08424 3.08309C3.67904 2.47696 4.39884 2.00782 5.19349 1.70834C5.95183 1.41475 6.81849 1.21325 8.08599 1.15475H8.08708ZM17.8154 3.29975C16.5587 3.24234 16.1817 3.23042 13 3.23042C9.81824 3.23042 9.44124 3.24234 8.18458 3.29975C7.02216 3.35284 6.39166 3.54675 5.97133 3.71034C5.41558 3.927 5.01799 4.18375 4.60091 4.60084C4.20554 4.98547 3.90127 5.45372 3.71041 5.97125C3.54683 6.39159 3.35291 7.02208 3.29983 8.1845C3.24241 9.44117 3.23049 9.81817 3.23049 12.9999C3.23049 16.1817 3.24241 16.5587 3.29983 17.8153C3.35291 18.9778 3.54683 19.6083 3.71041 20.0286C3.90108 20.5453 4.20549 21.0144 4.60091 21.399C4.98549 21.7944 5.45458 22.0988 5.97133 22.2895C6.39166 22.4531 7.02216 22.647 8.18458 22.7001C9.44124 22.7575 9.81716 22.7694 13 22.7694C16.1828 22.7694 16.5587 22.7575 17.8154 22.7001C18.9778 22.647 19.6083 22.4531 20.0287 22.2895C20.5844 22.0728 20.982 21.8161 21.3991 21.399C21.7945 21.0144 22.0989 20.5453 22.2896 20.0286C22.4532 19.6083 22.6471 18.9778 22.7002 17.8153C22.7576 16.5587 22.7695 16.1817 22.7695 12.9999C22.7695 9.81817 22.7576 9.44117 22.7002 8.1845C22.6471 7.02208 22.4532 6.39159 22.2896 5.97125C22.0729 5.4155 21.8162 5.01792 21.3991 4.60084C21.0144 4.2055 20.5462 3.90123 20.0287 3.71034C19.6083 3.54675 18.9778 3.35284 17.8154 3.29975V3.29975ZM11.4779 16.6735C12.328 17.0274 13.2745 17.0751 14.1558 16.8086C15.0372 16.5421 15.7987 15.9779 16.3102 15.2123C16.8218 14.4468 17.0517 13.5274 16.9607 12.6111C16.8697 11.6949 16.4634 10.8386 15.8112 10.1887C15.3955 9.77318 14.8928 9.45505 14.3394 9.25716C13.7859 9.05927 13.1955 8.98656 12.6105 9.04425C12.0256 9.10194 11.4607 9.28861 10.9566 9.59081C10.4525 9.89301 10.0216 10.3032 9.69507 10.7919C9.36851 11.2806 9.15437 11.8356 9.06805 12.417C8.98174 12.9984 9.02541 13.5917 9.19591 14.1542C9.36642 14.7167 9.65952 15.2344 10.0541 15.67C10.4487 16.1057 10.935 16.4484 11.4779 16.6735ZM8.66883 8.66875C9.2376 8.09997 9.91284 7.6488 10.656 7.34098C11.3991 7.03316 12.1956 6.87472 13 6.87472C13.8044 6.87472 14.6009 7.03316 15.344 7.34098C16.0871 7.6488 16.7624 8.09997 17.3312 8.66875C17.8999 9.23753 18.3511 9.91276 18.6589 10.6559C18.9668 11.3991 19.1252 12.1955 19.1252 12.9999C19.1252 13.8043 18.9668 14.6008 18.6589 15.3439C18.3511 16.0871 17.8999 16.7623 17.3312 17.3311C16.1825 18.4798 14.6245 19.1251 13 19.1251C11.3755 19.1251 9.81752 18.4798 8.66883 17.3311C7.52013 16.1824 6.8748 14.6244 6.8748 12.9999C6.8748 11.3754 7.52013 9.81745 8.66883 8.66875V8.66875ZM20.4837 7.78692C20.6246 7.65396 20.7374 7.49407 20.8155 7.31672C20.8935 7.13937 20.9352 6.94817 20.938 6.75443C20.9409 6.56068 20.9048 6.36834 20.8319 6.1888C20.7591 6.00925 20.651 5.84614 20.514 5.70913C20.3769 5.57212 20.2138 5.46399 20.0343 5.39115C19.8547 5.3183 19.6624 5.28223 19.4687 5.28505C19.2749 5.28787 19.0837 5.32954 18.9064 5.40759C18.729 5.48564 18.5691 5.59847 18.4362 5.73942C18.1776 6.01353 18.036 6.37763 18.0415 6.75443C18.047 7.13122 18.1991 7.49104 18.4656 7.7575C18.732 8.02396 19.0919 8.17608 19.4687 8.18158C19.8454 8.18707 20.2095 8.0455 20.4837 7.78692V7.78692Z" fill="black"/>
+                        </svg>                        
+                    </a>
+                    <!-- fb -->
+                    <a href="" class="mx-2">
+                        <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M14.5134 22.7467V13.8677H17.5088L17.9541 10.3913H14.5134V8.17694C14.5134 7.17377 14.7929 6.48694 16.2327 6.48694H18.057V3.38752C17.1694 3.2924 16.2771 3.24646 15.3844 3.24994C12.7368 3.24994 10.9189 4.86627 10.9189 7.83352V10.3848H7.94301V13.8612H10.9254V22.7467H14.5134Z" fill="black"/>
+                        </svg>                        
+                    </a>
+                    <!-- twitter -->
+                    <a href="" class="mx-2">
+                        <svg class="mt-1" width="26" height="22" viewBox="0 0 26 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_9_466)">
+                                <path d="M25.999 2.53132C25.275 3.621 24.3867 4.5499 23.3342 5.31802C23.3446 5.52402 23.3498 5.75686 23.3498 6.01654C23.3498 7.45933 23.1419 8.90387 22.7261 10.3502C22.3103 11.7964 21.6752 13.1808 20.8208 14.5032C19.9663 15.8257 18.9485 16.9972 17.7674 18.0179C16.5862 19.0386 15.1664 19.8524 13.5079 20.4594C11.8494 21.0664 10.072 21.3699 8.17561 21.3699C5.21597 21.3699 2.49043 20.5614 -0.0010004 18.9446C0.4412 18.9943 0.865306 19.0192 1.27132 19.0192C3.74386 19.0192 5.95223 18.2487 7.89644 16.7075C6.7436 16.6861 5.71115 16.3271 4.79909 15.6303C3.88702 14.9335 3.25935 14.0432 2.9161 12.9593C3.25538 13.0247 3.59025 13.0574 3.9207 13.0574C4.39635 13.0574 4.86439 12.9946 5.32481 12.8691C4.09452 12.6198 3.07388 11.9998 2.26291 11.009C1.45197 10.0184 1.0465 8.8749 1.0465 7.57869V7.51189C1.80165 7.93496 2.60715 8.16 3.46298 8.18701C2.73417 7.69539 2.15633 7.0543 1.72946 6.26374C1.30256 5.47319 1.08912 4.61766 1.08912 3.69718C1.08912 2.72637 1.32954 1.82237 1.81039 0.985172C3.14831 2.64642 4.76948 3.97415 6.6739 4.96834C8.57835 5.96255 10.6215 6.51471 12.8032 6.62481C12.7102 6.23241 12.6636 5.82293 12.6634 5.39636C12.6634 3.90694 13.1843 2.63519 14.2262 1.58111C15.268 0.527038 16.525 0 17.997 0C19.5381 0 20.8363 0.567804 21.8914 1.70341C23.0969 1.46181 24.2256 1.0248 25.2776 0.392393C24.8723 1.68299 24.0913 2.6786 22.9347 3.37922C23.9978 3.2514 25.0192 2.96877 25.999 2.53132H25.999Z" fill="black"/>
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_9_466">
+                                    <rect width="26" height="21.3699" fill="white"/>
+                                </clipPath>
+                            </defs>
+                        </svg>                        
+                    </a>
+                    <!-- linkedin -->
+                    <a href="" class="mx-2">
+                        <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 1.86225C0 0.833625 0.85475 0 1.90937 0H24.0906C25.1453 0 26 0.833625 26 1.86225V24.1378C26 25.1664 25.1453 26 24.0906 26H1.90937C0.85475 26 0 25.1664 0 24.1378V1.86225ZM8.03237 21.7652V10.0246H4.13075V21.7652H8.03237ZM6.08238 8.42075C7.4425 8.42075 8.28912 7.5205 8.28912 6.39275C8.26475 5.24062 7.44413 4.36475 6.10838 4.36475C4.77262 4.36475 3.9 5.24225 3.9 6.39275C3.9 7.5205 4.74662 8.42075 6.05638 8.42075H6.08238ZM14.0579 21.7652V15.2084C14.0579 14.8574 14.0839 14.5064 14.1879 14.2561C14.469 13.5557 15.1109 12.8294 16.1899 12.8294C17.602 12.8294 18.1659 13.9051 18.1659 15.4846V21.7652H22.0675V15.0312C22.0675 11.4237 20.1435 9.74675 17.576 9.74675C15.5057 9.74675 14.5779 10.8842 14.0579 11.6854V11.726H14.0319C14.0405 11.7124 14.0492 11.6989 14.0579 11.6854V10.0246H10.1579C10.2066 11.1264 10.1579 21.7652 10.1579 21.7652H14.0579Z" fill="black"/>
+                        </svg>                        
+                    </a>
+                </div>
+            </div>
+            <div class="border-t border-brand-black py-5">
+                <div class="flex justify-center font-poppins text-black font-bold text-sm sm:text-base">
+                    <a href="" class="mx-2">Get started</a> ·  <a href="" class="mx-2">Blog</a>  ·  <a href="" class="mx-2">Disclaimer</a>  ·  <a href="" class="mx-2">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="./assets/js/javascript.js"></script>
+</body>
+</html>

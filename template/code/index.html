@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @font-face {
+            font-family: Casual;
+            src: url('./assets/fonts/Casual-Regular.ttf');
+        }
+        .font-poppins{
+            font-family: 'Poppins', sans-serif;
+        }
+        .font-casual{
+            font-family: Casual;
+        }
+    </style>
+</head>
+<body>
+    <!-- navbar -->
+    <section>
+        <div class="bg-white w-full border-b border-brand-black">
+            <div class="flex flex-col px-4 md:px-10 lg:px-20 2xl:px-40 mx-auto lg:items-center lg:justify-between lg:flex-row">
+                <div class="py-4 flex flex-row items-center justify-between">
+                    <a href="#" class="flex md:py-1">
+                        <img src="./assets/img/logo.png" alt="">                    
+                    </a>
+                    <button class="lg:hidden rounded-lg focus:outline-none focus:shadow-outline" @click="open = !open">
+                        <svg width="25" height="18" viewBox="0 0 25 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 1H19" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M6 9H24" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M1 17H19" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>                           
+                    </button>
+                </div>
+                <nav class="flex-col flex-grow pb-4 lg:pb-0 hidden lg:flex lg:justify-end lg:flex-row">
+                    <div class="flex flex-col lg:flex-row">
+                        <a class="px-8 lg:px-5 2xl:px-8 py-5 text-primary-100 font-poppins font-normal text-sm text-black hover:text-brand-blue transition-all delay-150 ease-in-out" href="#">Home</a>
+                        <a class="px-8 lg:px-5 2xl:px-8 py-5 text-primary-100 font-poppins font-normal text-sm text-black hover:text-brand-blue transition-all delay-150 ease-in-out" href="#">Schedule</a>
+                        <a class="px-8 lg:px-5 2xl:px-8 py-5 text-primary-100 font-poppins font-normal text-sm text-brand-blue hover:text-brand-blue transition-all delay-150 ease-in-out" href="#">Food trucks</a>
+                        <a class="px-8 lg:px-5 2xl:px-8 py-5 text-primary-100 font-poppins font-normal text-sm text-black hover:text-brand-blue transition-all delay-150 ease-in-out" href="#">About</a>
+                        <a class="px-8 lg:px-5 2xl:px-8 py-5 text-primary-100 font-poppins font-normal text-sm text-black hover:text-brand-blue transition-all delay-150 ease-in-out" href="#">Contact</a>
+                        <button class="ml-8 my-1 py-2.5 block font-poppins text-white bg-brand-blue border-2 border-brand-blue font-regular text-sm rounded-full h-12 w-48 text-center hover:text-brand-blue hover:bg-white transition-all delay-150 ease-in-out">Vendor sign up</button>
+                    </div>
+                </nav>
+            </div>
+        </div>  
+    </section>
+        
+    <!--  -->
+    <section>
+        <div class="w-full px-4 md:px-10 lg:px-20 2xl:px-40">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 py-20">
+                <div class="text-center lg:text-left">
+                    <p class="font-casual text-4xl lg:text-6xl text-black pt-16">Lorem Ipsum is <br class="hidden xl:block"> simply dummy text of the industry.</p>
+                    <p class="font-poppins text-sm lg:text-base text-brand-gray py-7">Lorem Ipsum is simply dummy text of the printing and typesetting <br class="hidden xl:block"> industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                    <button class="my-4 lg:my-8 mx-auto lg:ml-0 py-2.5 block font-poppins text-white bg-brand-blue border-2 border-brand-blue font-regular text-sm rounded-full h-14 w-48 text-center hover:text-brand-blue hover:bg-white transition-all delay-150 ease-in-out">Vendor sign up</button>
+                </div>
+                <div class=" mt-16 lg:mt-0">
+                    <div class="relative">
+                        <!-- blue -->
+                        <div class="h-52 w-52 rounded-[63px] bg-brand-blue opacity-10 absolute right-0 md:left-1/2 ml-3 -mt-10"></div>
+                        <!-- img -->
+                        <img src="./assets/img/foodimg-1.png" class="mx-auto lg:mr-0 rounded-full relative" alt="">
+                        <!-- left -->
+                        <div class="absolute top-2/3 -mt-2 left-0 md:left-[18%] lg:left-[0%] xl:left-[15%] 2xl:left-32 h-20 lg:h-24 w-48 lg:w-64 border borde-white rounded-[197px] backdrop-blur-2xl" style="background: rgba(255, 255, 255, 0.7);box-sizing: border-box;">
+                            <p class="text-base lg:text-lg font-medium font-poppins text-center mt-2 lg:mt-2.5">Available on</p>
+                            <div class="flex justify-center mt-1">
+                                <svg class="mr-2 w-7 h-7 lg:w-10 lg:h-10" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M3.75 4.64766V35.3508C3.75021 35.4174 3.77007 35.4825 3.80711 35.5378C3.84415 35.5932 3.89671 35.6364 3.9582 35.662C4.01969 35.6876 4.08738 35.6945 4.15277 35.6818C4.21816 35.6691 4.27835 35.6374 4.32578 35.5906L20.3125 20L4.32578 4.40782C4.27835 4.36105 4.21816 4.32933 4.15277 4.31663C4.08738 4.30393 4.01969 4.31082 3.9582 4.33643C3.89671 4.36205 3.84415 4.40525 3.80711 4.46061C3.77007 4.51598 3.75021 4.58105 3.75 4.64766Z" fill="black"/>
+                                    <path d="M27.0157 13.5936L6.97034 2.54987L6.95784 2.54284C6.61253 2.35534 6.2844 2.82252 6.56721 3.0944L22.2805 18.1194L27.0157 13.5936Z" fill="black"/>
+                                    <path d="M6.56876 36.9053C6.28438 37.1772 6.61251 37.6444 6.95938 37.4569L6.97188 37.4499L27.0156 26.4061L22.2805 21.8788L6.56876 36.9053Z" fill="black"/>
+                                    <path d="M35.1078 18.0468L29.5102 14.964L24.2469 19.9999L29.5102 25.0335L35.1078 21.953C36.6305 21.1116 36.6305 18.8882 35.1078 18.0468Z" fill="black"/>
+                                </svg>                                    
+                                <svg class="ml-2 w-6 h-6 lg:w-7 lg:h-9" width="28" height="34" viewBox="0 0 28 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M27.4132 26.4963C26.9105 27.6842 26.3154 28.7776 25.626 29.7829C24.6862 31.1533 23.9168 32.102 23.3238 32.6287C22.4045 33.4934 21.4196 33.9362 20.3649 33.9614C19.6078 33.9614 18.6947 33.741 17.6318 33.294C16.5655 32.8491 15.5855 32.6287 14.6894 32.6287C13.7497 32.6287 12.7418 32.8491 11.6637 33.294C10.584 33.741 9.71423 33.974 9.04922 33.9971C8.03784 34.0412 7.02975 33.5857 6.02351 32.6287C5.38127 32.0558 4.57796 31.0736 3.61562 29.6821C2.58312 28.1963 1.73425 26.4732 1.06924 24.5089C0.357028 22.3871 0 20.3324 0 18.3433C0 16.0647 0.481372 14.0995 1.44555 12.4527C2.20331 11.1298 3.2114 10.0864 4.47311 9.32034C5.73481 8.55431 7.09808 8.16395 8.5662 8.13898C9.36952 8.13898 10.423 8.39313 11.7321 8.89262C13.0375 9.39379 13.8757 9.64795 14.2431 9.64795C14.5179 9.64795 15.449 9.35077 17.0276 8.75831C18.5203 8.20887 19.7802 7.98137 20.8123 8.07098C23.609 8.30184 25.7101 9.42947 27.1074 11.461C24.6062 13.0111 23.3689 15.1822 23.3935 17.9674C23.4161 20.1368 24.1856 21.9421 25.6978 23.3756C26.3831 24.0408 27.1485 24.555 28 24.9202C27.8153 25.468 27.6204 25.9926 27.4132 26.4963ZM20.999 0.680194C20.999 2.38058 20.3916 3.96823 19.181 5.43774C17.7201 7.1847 15.953 8.19417 14.0367 8.03488C14.0123 7.83089 13.9982 7.61619 13.9982 7.39058C13.9982 5.75821 14.6929 4.01125 15.9267 2.58288C16.5427 1.85966 17.3261 1.25832 18.2761 0.778622C19.2241 0.306078 20.1208 0.0447511 20.9641 0C20.9887 0.227315 20.999 0.454645 20.999 0.680172V0.680194Z" fill="black"/>
+                                </svg>                                    
+                            </div>
+                        </div>
+                        <!-- right -->
+                        <div class="absolute top-3/4 right-0 md:right-[21%] lg:-right-28 w-32 lg:w-60 h-20 border borde-white rounded-[197px] backdrop-blur-2xl" style="background: rgba(255, 255, 255, 0.7);box-sizing: border-box;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- about us -->
+    <section>
+        <div class="w-full px-4 md:px-10 lg:px-20 2xl:px-40">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 py-20">
+                <div>
+                    <div class="relative">
+                        <img src="./assets/img/about-img.png" class="mx-auto xl:ml-0" alt="">
+                        <div class="absolute -mt-20 mr-0 lg:-mr-10 right-0 md:right-[21%] lg:right-0 xl:right-1/4 w-24 lg:w-32 h-20 border borde-white rounded-[197px] backdrop-blur-2xl" style="background: rgba(255, 255, 255, 0.7);box-sizing: border-box;">
+                            <svg class="mx-auto mt-2" width="62" height="62" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M31 15.5C29.084 15.5 27.211 16.0682 25.6179 17.1326C24.0248 18.1971 22.7831 19.7101 22.0499 21.4803C21.3167 23.2504 21.1249 25.1982 21.4986 27.0774C21.8724 28.9566 22.7951 30.6828 24.1499 32.0376C25.5047 33.3924 27.2309 34.3151 29.1101 34.6889C30.9893 35.0627 32.9371 34.8708 34.7073 34.1376C36.4774 33.4044 37.9904 32.1627 39.0549 30.5696C40.1193 28.9765 40.6875 27.1035 40.6875 25.1875C40.6875 22.6182 39.6669 20.1542 37.8501 18.3374C36.0333 16.5206 33.5693 15.5 31 15.5Z" fill="black"/>
+                                <path d="M31 3.875C25.6352 3.875 20.3908 5.46585 15.9302 8.44639C11.4695 11.4269 7.99279 15.6633 5.93976 20.6197C3.88674 25.5762 3.34957 31.0301 4.3962 36.2918C5.44282 41.5536 8.02623 46.3868 11.8197 50.1803C15.6132 53.9738 20.4464 56.5572 25.7082 57.6038C30.9699 58.6504 36.4238 58.1133 41.3803 56.0602C46.3367 54.0072 50.5731 50.5305 53.5536 46.0698C56.5341 41.6092 58.125 36.3648 58.125 31C58.1168 23.8085 55.2564 16.9139 50.1712 11.8288C45.0861 6.74364 38.1915 3.8832 31 3.875ZM46.4845 48.2941C46.4459 45.7528 45.4105 43.3283 43.6013 41.5431C41.7922 39.7579 39.3541 38.7548 36.8125 38.75H25.1875C22.6459 38.7548 20.2078 39.7579 18.3987 41.5431C16.5895 43.3283 15.5541 45.7528 15.5155 48.2941C12.002 45.1568 9.52422 41.0263 8.41036 36.4495C7.2965 31.8728 7.59906 27.0656 9.27798 22.6646C10.9569 18.2636 13.933 14.4764 17.8122 11.8043C21.6913 9.13234 26.2906 7.70161 31.001 7.70161C35.7113 7.70161 40.3106 9.13234 44.1898 11.8043C48.0689 14.4764 51.045 18.2636 52.7239 22.6646C54.4029 27.0656 54.7054 31.8728 53.5916 36.4495C52.4777 41.0263 50 45.1568 46.4864 48.2941H46.4845Z" fill="black"/>
+                            </svg>                            
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center lg:text-right">
+                    <p class="font-casual text-4xl lg:text-6xl text-black pt-10">About us</p>
+                    <p class="font-poppins text-sm lg:text-base text-brand-gray py-7">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                    <button class="mx-auto lg:mr-0 my-4 lg:my-8 py-2.5 block font-poppins text-white bg-brand-blue border-2 border-brand-blue font-regular text-sm rounded-full h-14 w-48 text-center hover:text-brand-blue hover:bg-white transition-all delay-150 ease-in-out">Vendor sign up</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- operating hours -->
+    <section>
+        <div class="h-auto lg:h-screen w-full bg-cover " style="background-image: url('./assets/img/Subtract.png');">
+            <div class="w-full px-4 md:px-10 xl:px-40 py-4 lg:py-20 ">
+                <div class="text-center">
+                    <p class="font-casual text-4xl lg:text-6xl text-black pt-0 lg:pt-10">Operating hours</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-10 py-8 lg:py-20">
+                        <div class="bg-white rounded-full py-5 shadow-md lg:shadow-none">
+                            <p class="text-2xl font-casual text-black text-center">Thursday</p>
+                            <div class="mt-3">
+                                <p class="font-poppins text-sm text-brand-gray">11 am – 2 pm</p>
+                                <p class="font-poppins text-sm text-brand-gray">4 pm – 8 pm</p>    
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-full py-5 shadow-md lg:shadow-none">
+                            <p class="text-2xl font-casual text-black text-center">Friday</p>
+                            <div class="mt-3">
+                                <p class="font-poppins text-sm text-brand-gray">11 am – 2 pm</p>
+                                <p class="font-poppins text-sm text-brand-gray">4 pm – 8 pm</p>    
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-full py-5 shadow-md lg:shadow-none">
+                            <p class="text-2xl font-casual text-black text-center">Saturday</p>
+                            <div class="mt-3">
+                                <p class="font-poppins text-sm text-brand-gray">1 pm – 7 pm</p>    
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-full py-5 shadow-md lg:shadow-none">
+                            <p class="text-2xl font-casual text-black text-center">Sunday</p>
+                            <div class="mt-3">
+                                <p class="font-poppins text-sm text-brand-gray">1 pm – 7 pm</p>  
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-3 mx-auto w-28 h-20 border borde-white rounded-[197px] backdrop-blur-2xl shadow-md lg:shadow-none" style="background: rgba(255, 255, 255, 0.7);box-sizing: border-box;">
+                        <svg class="mt-2.5 mx-auto" width="58" height="58" viewBox="0 0 58 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M29 4.83334C15.6745 4.83334 4.83333 15.6745 4.83333 29C4.83333 42.3255 15.6745 53.1667 29 53.1667C42.3255 53.1667 53.1667 42.3255 53.1667 29C53.1667 15.6745 42.3255 4.83334 29 4.83334ZM29 48.3333C18.3401 48.3333 9.66667 39.6599 9.66667 29C9.66667 18.3401 18.3401 9.66667 29 9.66667C39.6599 9.66667 48.3333 18.3401 48.3333 29C48.3333 39.6599 39.6599 48.3333 29 48.3333Z" fill="black"/>
+                            <path d="M31.4167 16.9167H26.5833V30.0005L34.5414 37.9586L37.9586 34.5414L31.4167 27.9995V16.9167Z" fill="black"/>
+                        </svg>                            
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="w-full px-4 md:px-10 lg:px-20 2xl:px-40">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 py-20">
+                <div class="text-center lg:text-left">
+                    <p class="font-casual text-4xl lg:text-6xl text-black lg:pt-10">Schedule</p>
+                    <p class="font-poppins text-sm lg:text-base text-brand-gray py-7">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                        <br><br>
+                        It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages
+                    </p>
+                    <button class="mx-auto lg:ml-0 my-4 lg:my-8 py-2.5 block font-poppins text-white bg-brand-blue border-2 border-brand-blue font-regular text-sm rounded-full h-14 w-48 text-center hover:text-brand-blue hover:bg-white transition-all delay-150 ease-in-out">Vendor sign up</button>
+                </div>
+                <div class="">
+                    <!-- calender -->
+                    <div class="shadow-xl w-full rounded-3xl mr-auto py-5 px-2 md:px-7">
+                        <div class="flex justify-between">
+                            <button class="text-brand-gray flex border-2 border-brand-blue rounded-full h-8 md:h-10 px-4 py-0.5 text-sm md:text-base font-poppins">
+                                <svg class="mt-1.5 md:mt-2.5 mr-1" width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5.41667 0.916672L1.33334 5.00001L5.41667 9.08334" stroke="#616161" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M1.33334 5H10.6667" stroke="#616161" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>                                        
+                                <span class="mt-0.5 lg:mt-1">December</span>
+                            </button>
+                            <p class="font-casual text-base md:text-3xl text-black">January <span class="font-poppins">2022</span></p>
+                            <button class="text-brand-gray flex border-2 border-brand-blue rounded-full h-8 md:h-10 px-4 py-0.5 text-sm md:text-base font-poppins">
+                                <span class="mt-0.5 lg:mt-1">February</span>
+                                <svg class="mt-2 md:mt-3 ml-1.5" width="11" height="8" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6.24994 6.96997L10.3333 3.985L6.24994 1.00003" stroke="#616161" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M10.3333 3.98511L0.99992 3.98511" stroke="#616161" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>                                        
+                            </button>
+                        </div>
+                        <div class="px-4 md:px-0">
+                            <!-- dates -->
+                            <ul class="grid grid-cols-7">
+                                <li class="text-black font-poppins text-sm sm:text-base py-3 hover:text-brand-blue transition-all delay-100 ease-in-out cursor-pointer text-center"></li>
+                                <li class="text-black font-poppins text-sm sm:text-base py-3 hover:text-brand-blue transition-all delay-100 ease-in-out cursor-pointer text-center"></li>
+                                <li class="text-black font-poppins text-sm sm:text-base py-3 hover:text-brand-blue transition-all delay-100 ease-in-out cursor-pointer text-center"></li>
+                                <li class="text-black font-poppins text-sm sm:text-base py-3 hover:text-brand-blue transition-all delay-100 ease-in-out cursor-pointer text-center"></li>
+                                <li class="text-black font-poppins text-sm sm:text-base py-3 hover:text-brand-blue transition-all delay-100 ease-in-out cursor-pointer text-center"></li>
+                                <li class="text-black font-poppins text-sm sm:text-base py-3 hover:text-brand-blue transition-all delay-100 ease-in-out cursor-pointer text-center"></li>
+                                <li class="text-brand-blue font-poppins text-sm sm:text-base py-3 hover:text-brand-blue transition-all delay-100 ease-in-out cursor-pointer text-center">01</li>
+                            </ul>
+                            <ul class="grid grid-cols-7 text-center">
+                                <li class="text-black font-poppins text-sm sm:text-base py-3 hover:text-brand-blue transition-all delay-100 ease-in-out cursor-pointer">02</li>
+                                <li class="text-brand-blue font-poppins text-sm sm:text-base py-3  hover:text-brand-blue transition-all delay-100 ease-in-out cursor-pointer">03</li>
+                                <li class="text-black font-poppins text-sm sm:text-base py-3 hover:text-brand-blue transition-all delay-100 ease-in-out cursor-pointer">04</li>
+                                <li class="text-black font-poppins text-sm sm:text-base py-3 hover:text-brand-blue transition-all delay-100 ease-in-out cursor-pointer">05</li>
+                                <li class="text-black font-poppins text-sm sm:text-base py-3 hover:text-brand-blue transition-all delay-100 ease-in-out cursor-pointer">06</li>
+                                <li class="text-black font-poppins text-sm sm:text-base py-3 hover:text-brand-blue transition-all delay-100 ease-in-out cursor-pointer">07</li>
+                                <li class="text-black font-poppins text-sm sm:text-base py-3 hover:text-brand-blue transition-all delay-100 ease-in-out cursor-pointer">08</li>
+                            </ul>
+                            <ul class="grid grid-cols-7 text-center">
+                                <li class="text-black font-poppins text-sm sm:text-base py-3 hover:text-brand-blue transition-all delay-100 ease-in-out cursor-pointer">09</li>
+                                <li class="text-black font-poppins text-sm sm:text-base py-3 hover:text-brand-blue transition-all delay-100 ease-in-out cursor-pointer">10</li>
+                                <li class="text-black font-poppins text-sm sm:text-base py-3 hover:text-brand-blue transition-all delay-100 ease-in-out cursor-pointer">11</li>
+                                <li class="text-black font-poppins text-sm sm:text-base py-3 hover:text-brand-blue transition-all delay-100 ease-in-out cursor-pointer">12</li>
+                                <li class="text-black font-poppins text-sm sm:text-base py-3 hover:text-brand-blue transition-all delay-100 ease-in-out cursor-pointer">13</li>
+                                <li class="text-black font-poppins text-sm sm:text-base py-3 hover:text-brand-blue transition-all delay-100 ease-in-out cursor-pointer">14</li>
+                                <li class="text-black font-poppins text-sm sm:text-base py-3 hover:text-brand-blue transition-all delay-100 ease-in-out cursor-pointer">15</li>
+                            </ul>
+                            <ul class="grid grid-cols-7 text-center">
+                                <li class="text-black font-poppins text-sm sm:text-base py-3 hover:text-brand-blue transition-all delay-100 ease-in-out cursor-pointer">16</li>
+                                <li class="text-black font-poppins text-sm sm:text-base py-3 hover:text-brand-blue transition-all delay-100 ease-in-out cursor-pointer">17</li>
+                                <li class="text-black font-poppins text-sm sm:text-base py-3 hover:text-brand-blue transition-all delay-100 ease-in-out cursor-pointer">18</li>
+                                <li class="text-black font-poppins text-sm sm:text-base py-3 hover:text-brand-blue transition-all delay-100 ease-in-out cursor-pointer">19</li>
+                                <li class="text-black font-poppins text-sm sm:text-base py-3 hover:text-brand-blue transition-all delay-100 ease-in-out cursor-pointer">20</li>
+                                <li class="text-black font-poppins text-sm sm:text-base py-3 hover:text-brand-blue transition-all delay-100 ease-in-out cursor-pointer">21</li>
+                                <li class="text-black font-poppins text-sm sm:text-base py-3 hover:text-brand-blue transition-all delay-100 ease-in-out cursor-pointer">22</li>
+                            </ul>
+                            <ul class="grid grid-cols-7 text-center">
+                                <li class="text-black font-poppins text-sm sm:text-base py-3 hover:text-brand-blue transition-all delay-100 ease-in-out cursor-pointer">23</li>
+                                <li class="text-black font-poppins text-sm sm:text-base py-3 hover:text-brand-blue transition-all delay-100 ease-in-out cursor-pointer">24</li>
+                                <li class="text-black font-poppins text-sm sm:text-base py-3 hover:text-brand-blue transition-all delay-100 ease-in-out cursor-pointer">25</li>
+                                <li class="text-black font-poppins text-sm sm:text-base py-3 hover:text-brand-blue transition-all delay-100 ease-in-out cursor-pointer">26</li>
+                                <li class="text-black font-poppins text-sm sm:text-base py-3 hover:text-brand-blue transition-all delay-100 ease-in-out cursor-pointer">27</li>
+                                <li class="text-black font-poppins text-sm sm:text-base py-3 hover:text-brand-blue transition-all delay-100 ease-in-out cursor-pointer">28</li>
+                                <li class="text-black font-poppins text-sm sm:text-base py-3 hover:text-brand-blue transition-all delay-100 ease-in-out cursor-pointer">29</li>
+                            </ul>
+                            <ul class="grid grid-cols-7 text-center">
+                                <li class="text-black font-poppins text-sm sm:text-base py-3 hover:text-brand-blue transition-all delay-100 ease-in-out cursor-pointer">30</li>
+                                <li class="text-black font-poppins text-sm sm:text-base py-3 hover:text-brand-blue transition-all delay-100 ease-in-out cursor-pointer">31</li>
+                                <li class="text-black font-poppins text-sm sm:text-base py-3 hover:text-brand-blue transition-all delay-100 ease-in-out cursor-pointer"></li>
+                                <li class="text-black font-poppins text-sm sm:text-base py-3 hover:text-brand-blue transition-all delay-100 ease-in-out cursor-pointer"></li>
+                                <li class="text-black font-poppins text-sm sm:text-base py-3 hover:text-brand-blue transition-all delay-100 ease-in-out cursor-pointer"></li>
+                                <li class="text-black font-poppins text-sm sm:text-base py-3 hover:text-brand-blue transition-all delay-100 ease-in-out cursor-pointer"></li>
+                                <li class="text-black font-poppins text-sm sm:text-base py-3 hover:text-brand-blue transition-all delay-100 ease-in-out cursor-pointer"></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- food truck -->
+    <section>
+        <div class="w-full px-4 md:px-10 lg:px-20 2xl:px-40 py-5 block">
+            <p class="font-casual text-4xl lg:text-6xl text-black pt-10 text-center">Food trucks</p>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-16 my-16">
+                <div class="flex p-4 shadow-xl rounded-2xl">
+                    <img src="./assets/img/victoria-shes-UC0HZdUitWY-unsplash 2.png" class="rounded-lg" alt="">
+                    <div class="ml-6 w-1/2 sm:w-44">
+                        <p class="font-casual text-black text-lg sm:text-2xl">Restaurant Name Goes Here</p>
+                        <p class="text-brand-blue font-poppins text-base my-3">Open</p>
+                        <button class="text-brand-blue border border-brand-blue font-poppins text-sm rounded-full px-3 py-2">Order Online</button>
+                    </div>
+                </div>
+                <div class="flex p-4 shadow-xl rounded-2xl">
+                    <img src="./assets/img/victoria-shes-UC0HZdUitWY-unsplash 2.png" class="rounded-lg" alt="">
+                    <div class="ml-6 w-1/2 sm:w-44">
+                        <p class="font-casual text-black text-2xl">Restaurant Name Goes Here</p>
+                        <p class="text-brand-blue font-poppins text-base my-3">Closed</p>
+                        <button class="text-brand-gray-100 border border-brand-gray-100font-poppins text-sm rounded-full px-3 py-2">Order Online</button>
+                    </div>
+                </div>
+                <div class="flex p-4 shadow-xl rounded-2xl">
+                    <img src="./assets/img/victoria-shes-UC0HZdUitWY-unsplash 2.png" class="rounded-lg" alt="">
+                    <div class="ml-6 w-1/2 sm:w-44">
+                        <p class="font-casual text-black text-2xl">Restaurant Name Goes Here</p>
+                        <p class="text-brand-blue font-poppins text-base my-3">Open</p>
+                        <button class="text-brand-blue border border-brand-blue font-poppins text-sm rounded-full px-3 py-2">Order Online</button>
+                    </div>
+                </div>
+            </div>
+            <button class="mx-auto my-4 lg:my-8 py-2.5 block font-poppins text-white bg-brand-blue border-2 border-brand-blue font-regular text-sm rounded-full h-14 w-48 text-center hover:text-brand-blue hover:bg-white transition-all delay-150 ease-in-out">View More</button>
+        </div>
+    </section>
+
+    <!-- local food -->
+    <section>
+        <div class="w-full px-4 md:px-10 lg:px-20 2xl:px-40">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 py-12 md:py-20">
+                <div >
+                    <div class="relative">
+                        <!-- img -->
+                        <img src="./assets/img/localfood.png" class="relative mx-auto lg:ml-0" alt="">
+                        <!-- blue -->
+                        <div class="h-52 w-52 rounded-[63px] bg-brand-blue opacity-10 absolute right-0 md:right-[13%] lg:right-4 2xl:right-[20%] ml-3 -mt-44"></div>
+                    </div>
+                </div>
+                <div class="text-center lg:text-right mt-20 lg:mt-0">
+                    <p class="font-casual text-4xl lg:text-6xl text-black">Home of local food</p>
+                    <p class="font-poppins text-sm lg:text-base text-brand-gray py-7">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                    </p>
+                    <button class="mx-auto lg:mr-0 my-4 lg:my-8 py-2.5 block font-poppins text-white bg-brand-blue border-2 border-brand-blue font-regular text-sm rounded-full h-14 w-48 text-center hover:text-brand-blue hover:bg-white transition-all delay-150 ease-in-out">Buy online</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- local bussines -->
+    <section>
+        <div class="w-full px-4 md:px-10 lg:px-20 2xl:px-40">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 py-12 md:py-20">
+                <div class="text-center lg:text-left mt-20 lg:mt-0">
+                    <p class="font-casual text-4xl lg:text-6xl text-black">Support good food <br class="hidden xl:block">
+                        and local business</p>
+                    <p class="font-poppins text-sm lg:text-base text-brand-gray py-7">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                    </p>
+                    <button class="mx-auto lg:ml-0 my-4 lg:my-8 py-2.5 block font-poppins text-white bg-brand-blue border-2 border-brand-blue font-regular text-sm rounded-full h-14 w-48 text-center hover:text-brand-blue hover:bg-white transition-all delay-150 ease-in-out">Buy online</button>
+                </div>
+                <div class=" order-first lg:order-last">
+                    <div class="relative">
+                        <!-- img -->
+                        <img src="./assets/img/Mask Group.png" class="mx-auto lg:mr-0" alt="">
+                        <!-- blue -->
+                        <div class="h-52 w-52 rounded-[63px] bg-brand-blue opacity-10 absolute -left-5 sm:left-0 md:left-[13%] lg:-left-4 2xl:left-[20%] ml-3 -mt-44"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <section>
+        <div class="w-full bg-brand-lightblue">
+            <div class="p-8">
+                <img src="./assets/img/footer logo.png" class="mx-auto" alt="">
+                <p class="pt-8 text-center font-poppins text-black text-base text-brand-gray">Lorem Ipsum is simply dummy text of the printing and <br class="hidden md:block">
+                    typesetting industry. </p>
+                <p class="py-7 text-center font-poppins text-black text-base">
+                    Address goes here <br>
+                    contact@yourcompany.com <br>
+                    +00 123 456 789
+                </p>
+                <div class="flex justify-center pt-7">
+                    <!-- insta -->
+                    <a href="" class="mx-2">
+                        <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M8.08708 1.15475C9.35783 1.09625 9.76299 1.08325 13 1.08325C16.237 1.08325 16.6422 1.09734 17.9118 1.15475C19.1815 1.21217 20.0482 1.41475 20.8065 1.70834C21.6006 2.00842 22.321 2.4775 22.9168 3.08417C23.5235 3.67892 23.9915 4.39825 24.2905 5.19342C24.5852 5.95175 24.7867 6.81842 24.8452 8.08592C24.9037 9.35883 24.9167 9.764 24.9167 12.9999C24.9167 16.2369 24.9026 16.6421 24.8452 17.9128C24.7877 19.1803 24.5852 20.047 24.2905 20.8053C23.9915 21.6006 23.5227 22.3211 22.9168 22.9167C22.321 23.5234 21.6006 23.9914 20.8065 24.2904C20.0482 24.5851 19.1815 24.7866 17.914 24.8451C16.6422 24.9036 16.237 24.9166 13 24.9166C9.76299 24.9166 9.35783 24.9025 8.08708 24.8451C6.81958 24.7877 5.95291 24.5851 5.19458 24.2904C4.39933 23.9914 3.6788 23.5226 3.08316 22.9167C2.47691 22.3216 2.00775 21.6015 1.70841 20.8064C1.41483 20.0481 1.21333 19.1814 1.15483 17.9139C1.09633 16.641 1.08333 16.2358 1.08333 12.9999C1.08333 9.76292 1.09741 9.35775 1.15483 8.08808C1.21224 6.81842 1.41483 5.95175 1.70841 5.19342C2.00819 4.39834 2.47771 3.67817 3.08424 3.08309C3.67904 2.47696 4.39884 2.00782 5.19349 1.70834C5.95183 1.41475 6.81849 1.21325 8.08599 1.15475H8.08708ZM17.8154 3.29975C16.5587 3.24234 16.1817 3.23042 13 3.23042C9.81824 3.23042 9.44124 3.24234 8.18458 3.29975C7.02216 3.35284 6.39166 3.54675 5.97133 3.71034C5.41558 3.927 5.01799 4.18375 4.60091 4.60084C4.20554 4.98547 3.90127 5.45372 3.71041 5.97125C3.54683 6.39159 3.35291 7.02208 3.29983 8.1845C3.24241 9.44117 3.23049 9.81817 3.23049 12.9999C3.23049 16.1817 3.24241 16.5587 3.29983 17.8153C3.35291 18.9778 3.54683 19.6083 3.71041 20.0286C3.90108 20.5453 4.20549 21.0144 4.60091 21.399C4.98549 21.7944 5.45458 22.0988 5.97133 22.2895C6.39166 22.4531 7.02216 22.647 8.18458 22.7001C9.44124 22.7575 9.81716 22.7694 13 22.7694C16.1828 22.7694 16.5587 22.7575 17.8154 22.7001C18.9778 22.647 19.6083 22.4531 20.0287 22.2895C20.5844 22.0728 20.982 21.8161 21.3991 21.399C21.7945 21.0144 22.0989 20.5453 22.2896 20.0286C22.4532 19.6083 22.6471 18.9778 22.7002 17.8153C22.7576 16.5587 22.7695 16.1817 22.7695 12.9999C22.7695 9.81817 22.7576 9.44117 22.7002 8.1845C22.6471 7.02208 22.4532 6.39159 22.2896 5.97125C22.0729 5.4155 21.8162 5.01792 21.3991 4.60084C21.0144 4.2055 20.5462 3.90123 20.0287 3.71034C19.6083 3.54675 18.9778 3.35284 17.8154 3.29975V3.29975ZM11.4779 16.6735C12.328 17.0274 13.2745 17.0751 14.1558 16.8086C15.0372 16.5421 15.7987 15.9779 16.3102 15.2123C16.8218 14.4468 17.0517 13.5274 16.9607 12.6111C16.8697 11.6949 16.4634 10.8386 15.8112 10.1887C15.3955 9.77318 14.8928 9.45505 14.3394 9.25716C13.7859 9.05927 13.1955 8.98656 12.6105 9.04425C12.0256 9.10194 11.4607 9.28861 10.9566 9.59081C10.4525 9.89301 10.0216 10.3032 9.69507 10.7919C9.36851 11.2806 9.15437 11.8356 9.06805 12.417C8.98174 12.9984 9.02541 13.5917 9.19591 14.1542C9.36642 14.7167 9.65952 15.2344 10.0541 15.67C10.4487 16.1057 10.935 16.4484 11.4779 16.6735ZM8.66883 8.66875C9.2376 8.09997 9.91284 7.6488 10.656 7.34098C11.3991 7.03316 12.1956 6.87472 13 6.87472C13.8044 6.87472 14.6009 7.03316 15.344 7.34098C16.0871 7.6488 16.7624 8.09997 17.3312 8.66875C17.8999 9.23753 18.3511 9.91276 18.6589 10.6559C18.9668 11.3991 19.1252 12.1955 19.1252 12.9999C19.1252 13.8043 18.9668 14.6008 18.6589 15.3439C18.3511 16.0871 17.8999 16.7623 17.3312 17.3311C16.1825 18.4798 14.6245 19.1251 13 19.1251C11.3755 19.1251 9.81752 18.4798 8.66883 17.3311C7.52013 16.1824 6.8748 14.6244 6.8748 12.9999C6.8748 11.3754 7.52013 9.81745 8.66883 8.66875V8.66875ZM20.4837 7.78692C20.6246 7.65396 20.7374 7.49407 20.8155 7.31672C20.8935 7.13937 20.9352 6.94817 20.938 6.75443C20.9409 6.56068 20.9048 6.36834 20.8319 6.1888C20.7591 6.00925 20.651 5.84614 20.514 5.70913C20.3769 5.57212 20.2138 5.46399 20.0343 5.39115C19.8547 5.3183 19.6624 5.28223 19.4687 5.28505C19.2749 5.28787 19.0837 5.32954 18.9064 5.40759C18.729 5.48564 18.5691 5.59847 18.4362 5.73942C18.1776 6.01353 18.036 6.37763 18.0415 6.75443C18.047 7.13122 18.1991 7.49104 18.4656 7.7575C18.732 8.02396 19.0919 8.17608 19.4687 8.18158C19.8454 8.18707 20.2095 8.0455 20.4837 7.78692V7.78692Z" fill="black"/>
+                        </svg>                        
+                    </a>
+                    <!-- fb -->
+                    <a href="" class="mx-2">
+                        <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M14.5134 22.7467V13.8677H17.5088L17.9541 10.3913H14.5134V8.17694C14.5134 7.17377 14.7929 6.48694 16.2327 6.48694H18.057V3.38752C17.1694 3.2924 16.2771 3.24646 15.3844 3.24994C12.7368 3.24994 10.9189 4.86627 10.9189 7.83352V10.3848H7.94301V13.8612H10.9254V22.7467H14.5134Z" fill="black"/>
+                        </svg>                        
+                    </a>
+                    <!-- twitter -->
+                    <a href="" class="mx-2">
+                        <svg class="mt-1" width="26" height="22" viewBox="0 0 26 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_9_466)">
+                                <path d="M25.999 2.53132C25.275 3.621 24.3867 4.5499 23.3342 5.31802C23.3446 5.52402 23.3498 5.75686 23.3498 6.01654C23.3498 7.45933 23.1419 8.90387 22.7261 10.3502C22.3103 11.7964 21.6752 13.1808 20.8208 14.5032C19.9663 15.8257 18.9485 16.9972 17.7674 18.0179C16.5862 19.0386 15.1664 19.8524 13.5079 20.4594C11.8494 21.0664 10.072 21.3699 8.17561 21.3699C5.21597 21.3699 2.49043 20.5614 -0.0010004 18.9446C0.4412 18.9943 0.865306 19.0192 1.27132 19.0192C3.74386 19.0192 5.95223 18.2487 7.89644 16.7075C6.7436 16.6861 5.71115 16.3271 4.79909 15.6303C3.88702 14.9335 3.25935 14.0432 2.9161 12.9593C3.25538 13.0247 3.59025 13.0574 3.9207 13.0574C4.39635 13.0574 4.86439 12.9946 5.32481 12.8691C4.09452 12.6198 3.07388 11.9998 2.26291 11.009C1.45197 10.0184 1.0465 8.8749 1.0465 7.57869V7.51189C1.80165 7.93496 2.60715 8.16 3.46298 8.18701C2.73417 7.69539 2.15633 7.0543 1.72946 6.26374C1.30256 5.47319 1.08912 4.61766 1.08912 3.69718C1.08912 2.72637 1.32954 1.82237 1.81039 0.985172C3.14831 2.64642 4.76948 3.97415 6.6739 4.96834C8.57835 5.96255 10.6215 6.51471 12.8032 6.62481C12.7102 6.23241 12.6636 5.82293 12.6634 5.39636C12.6634 3.90694 13.1843 2.63519 14.2262 1.58111C15.268 0.527038 16.525 0 17.997 0C19.5381 0 20.8363 0.567804 21.8914 1.70341C23.0969 1.46181 24.2256 1.0248 25.2776 0.392393C24.8723 1.68299 24.0913 2.6786 22.9347 3.37922C23.9978 3.2514 25.0192 2.96877 25.999 2.53132H25.999Z" fill="black"/>
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_9_466">
+                                    <rect width="26" height="21.3699" fill="white"/>
+                                </clipPath>
+                            </defs>
+                        </svg>                        
+                    </a>
+                    <!-- linkedin -->
+                    <a href="" class="mx-2">
+                        <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 1.86225C0 0.833625 0.85475 0 1.90937 0H24.0906C25.1453 0 26 0.833625 26 1.86225V24.1378C26 25.1664 25.1453 26 24.0906 26H1.90937C0.85475 26 0 25.1664 0 24.1378V1.86225ZM8.03237 21.7652V10.0246H4.13075V21.7652H8.03237ZM6.08238 8.42075C7.4425 8.42075 8.28912 7.5205 8.28912 6.39275C8.26475 5.24062 7.44413 4.36475 6.10838 4.36475C4.77262 4.36475 3.9 5.24225 3.9 6.39275C3.9 7.5205 4.74662 8.42075 6.05638 8.42075H6.08238ZM14.0579 21.7652V15.2084C14.0579 14.8574 14.0839 14.5064 14.1879 14.2561C14.469 13.5557 15.1109 12.8294 16.1899 12.8294C17.602 12.8294 18.1659 13.9051 18.1659 15.4846V21.7652H22.0675V15.0312C22.0675 11.4237 20.1435 9.74675 17.576 9.74675C15.5057 9.74675 14.5779 10.8842 14.0579 11.6854V11.726H14.0319C14.0405 11.7124 14.0492 11.6989 14.0579 11.6854V10.0246H10.1579C10.2066 11.1264 10.1579 21.7652 10.1579 21.7652H14.0579Z" fill="black"/>
+                        </svg>                        
+                    </a>
+                </div>
+            </div>
+            <div class="border-t border-brand-black py-5">
+                <div class="flex justify-center font-poppins text-black font-bold text-sm sm:text-base">
+                    <a href="" class="mx-2">Get started</a> ·  <a href="" class="mx-2">Blog</a>  ·  <a href="" class="mx-2">Disclaimer</a>  ·  <a href="" class="mx-2">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="./assets/js/javascript.js"></script>
+</body>
+</html>
